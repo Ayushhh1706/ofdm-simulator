@@ -1,4 +1,5 @@
-const API_URL = "http://127.0.0.1:8000/api/simulate/";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const API_URL = `${BASE_URL}/api/simulate/`;
 
 export async function runSimulation(parameters) {
   const formData = new FormData();
